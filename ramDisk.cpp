@@ -31,12 +31,12 @@ void help();
 void version();
 
 /* Constant Variables */
-const char MOUNT_STR[] = "mount";
-const char UNMOUNT_STR[] = "unmount";
-const char HELP_STR[] = "help";
-const char VERSION_STR[] = "version";
+const char MOUNT_STR[] = "-mount";
+const char UNMOUNT_STR[] = "-unmount";
+const char HELP_STR[] = "-help";
+const char VERSION_STR[] = "-version";
 const int VERSION_M = 1;
-const int VERSION_REV = 0;
+const int VERSION_REV = 1;
 const char AUTH_NAME[] = "Nigel Mpofu";
 const char AUTH_EMAIL[] = "nvmpofu@gmail.com";
 
@@ -207,8 +207,8 @@ bool unmount()
 void help()
 {
 	cout << "*** RamDisk Available Commands ***\n";
-	cout << "mount   - Mounts the 1GB (1024MB) Ram Disk to '/media/ramdisk'\n";
-	cout << "unmount - Unmounts the Ram Disk\n";
+	cout << "-mount   - Mounts the 1GB (1024MB) Ram Disk to '/media/ramdisk'\n";
+	cout << "-unmount - Unmounts the Ram Disk\n";
 	cout << "Note: Data is lost on unmount and system power loss.\n\n";
 	version();
 }
@@ -217,5 +217,5 @@ void help()
 void version()
 {
 	cout << "RamDisk Version: " << VERSION_M << "." << VERSION_REV << endl;
-	cout << "Author: " << AUTH_NAME << " (" << AUTH_EMAIL << ")" << endl;
+	cout << "By: " << AUTH_NAME << " (" << AUTH_EMAIL << ")" << endl;
 }
